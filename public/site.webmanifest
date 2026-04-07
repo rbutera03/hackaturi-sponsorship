@@ -1,0 +1,15 @@
+{
+  "name": "Hack@URI Sponsorship",
+  "short_name": "H@URI Sponsors",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#0abab5",
+  "background_color": "#F6E9C8",
+  "display": "standalone"
+}

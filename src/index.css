@@ -1,0 +1,18 @@
+/* src/index.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Poppins', system-ui, sans-serif;
+  background: #F6E9C8;
+  color: #0C3A40;
+  overflow-x: hidden;
+}

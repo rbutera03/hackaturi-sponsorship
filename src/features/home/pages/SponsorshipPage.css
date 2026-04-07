@@ -1,0 +1,105 @@
+.sponsor-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.sponsor-header {
+  margin-bottom: 2.5rem;
+}
+
+.sponsor-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-nav);
+  margin-bottom: 0.5rem;
+}
+
+.sponsor-title {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--teal-dark);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.sponsor-lead {
+  font-family: 'Nunito', var(--font-main);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  opacity: 0.92;
+}
+
+.sponsor-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 1.75rem 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid rgba(12, 58, 64, 0.12);
+}
+
+.sponsor-card h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  margin-bottom: 0.65rem;
+}
+
+.sponsor-card p {
+  font-family: 'Nunito', var(--font-main);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.sponsor-card p:last-of-type {
+  margin-bottom: 1rem;
+}
+
+.sponsor-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sponsor-link:hover {
+  transform: translateY(-1px);
+}
+
+.sponsor-link-primary {
+  background: var(--teal-nav);
+  color: var(--cream);
+  box-shadow: 0 4px 14px rgba(10, 78, 78, 0.35);
+}
+
+.sponsor-link-primary:hover {
+  box-shadow: 0 6px 18px rgba(10, 78, 78, 0.45);
+}
+
+.sponsor-link-secondary {
+  background: transparent;
+  color: var(--teal-nav);
+  border: 2px solid var(--gold);
+  padding: 0.55rem 1.15rem;
+}
+
+.sponsor-link-secondary:hover {
+  background: rgba(195, 168, 115, 0.15);
+}
+
+.sponsor-icon-external {
+  width: 0.85em;
+  height: 0.85em;
+  opacity: 0.85;
+}
