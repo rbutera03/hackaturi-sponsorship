@@ -1,0 +1,47 @@
+/* Shared layout for impact report sections */
+.report-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  border-bottom: 1px solid rgba(12, 58, 64, 0.1);
+}
+
+.report-section:last-of-type {
+  border-bottom: none;
+}
+
+.report-section__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-nav);
+  margin-bottom: 0.5rem;
+}
+
+.report-section__title {
+  font-size: clamp(1.65rem, 4vw, 2.15rem);
+  font-weight: 800;
+  color: var(--teal-dark);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.report-section__prose {
+  font-family: 'Nunito', var(--font-main);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+}
+
+.report-section__prose p + p {
+  margin-top: 1rem;
+}
+
+.report-section__media {
+  margin-top: 1.75rem;
+}
+
+.report-section__media--flush-top {
+  margin-top: 1rem;
+}

@@ -1,0 +1,80 @@
+.sponsorship-cta__layout {
+  display: grid;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .sponsorship-cta__layout {
+    grid-template-columns: 1fr minmax(200px, 280px);
+    gap: 2rem;
+  }
+}
+
+.sponsorship-cta__prose {
+  margin-bottom: 1.5rem;
+}
+
+.sponsorship-cta__inline-link {
+  color: var(--teal-nav);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.sponsorship-cta__inline-link:hover {
+  text-decoration: none;
+}
+
+.sponsorship-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.sponsorship-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.25rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sponsorship-cta__btn:hover {
+  transform: translateY(-1px);
+}
+
+.sponsorship-cta__btn--primary {
+  background: var(--teal-nav);
+  color: var(--cream);
+  box-shadow: 0 4px 14px rgba(10, 78, 78, 0.35);
+}
+
+.sponsorship-cta__btn--primary:hover {
+  box-shadow: 0 6px 18px rgba(10, 78, 78, 0.45);
+}
+
+.sponsorship-cta__btn--secondary {
+  background: transparent;
+  color: var(--teal-nav);
+  border: 2px solid var(--gold);
+  padding: 0.55rem 1.15rem;
+}
+
+.sponsorship-cta__btn--secondary:hover {
+  background: rgba(195, 168, 115, 0.15);
+}
+
+.sponsorship-cta__icon-external {
+  width: 0.85em;
+  height: 0.85em;
+  opacity: 0.85;
+}
+
+.sponsorship-cta__visual {
+  min-width: 0;
+}

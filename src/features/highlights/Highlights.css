@@ -1,0 +1,15 @@
+.highlights__intro {
+  margin-bottom: 1.5rem;
+}
+
+.highlights__gallery {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 700px) {
+  .highlights__gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
