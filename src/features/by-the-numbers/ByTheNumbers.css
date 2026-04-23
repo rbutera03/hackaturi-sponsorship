@@ -1,35 +1,61 @@
-.by-the-numbers__stats {
+.by-the-numbers-impact {
+  background: var(--teal-nav);
+  /* Reduced from 5rem to 2rem to make it a slim bar */
+  padding: 2rem var(--page-gutter); 
+  width: 100%;
+}
+
+.by-the-numbers__stats-list {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 1rem 1.25rem;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Tightened gap */
+  gap: 1.5rem 2.5rem;
 }
 
-.by-the-numbers__stat {
-  background: #fff;
-  border-radius: var(--radius-md);
-  padding: 1.15rem 1rem;
-  border: 1px solid rgba(12, 58, 64, 0.1);
-  box-shadow: var(--shadow-card);
+.by-the-numbers__stat-item {
   text-align: center;
+  color: var(--cream);
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.by-the-numbers__value {
+.by-the-numbers__icon {
+  width: 32px; /* Slightly smaller icon */
+  height: 32px;
+  margin-bottom: 0.4rem; /* Tightened spacing */
+  opacity: 0.95;
+  color: var(--cream);
+}
+
+.by-the-numbers__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.by-the-numbers__stat-value {
   display: block;
-  font-size: 1.65rem;
+  font-family: var(--font-main);
+  /* Slightly smaller clamp range for a lower profile */
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 800;
-  color: var(--teal-dark);
-  line-height: 1.1;
-  margin-bottom: 0.35rem;
+  line-height: 1;
+  margin-bottom: 0.15rem; /* Minimal spacing */
 }
 
-.by-the-numbers__label {
-  font-family: 'Nunito', var(--font-main);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  opacity: 0.88;
-  line-height: 1.3;
+.by-the-numbers__stat-label {
+  display: block;
+  font-family: var(--font-main);
+  font-size: 0.75rem; /* Smaller label for a more "data-dense" look */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
 }
