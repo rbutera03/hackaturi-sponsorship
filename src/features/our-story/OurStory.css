@@ -1,10 +1,14 @@
-.our-story__layout {
+/* ==========================================================================
+   OurStory.css — Story section layout styles
+   ========================================================================== */
+
+.our-story-layout {
   display: grid;
   gap: 1rem;
   align-items: start;
 }
 
-.our-story__media {
+.our-story-media {
   min-width: 0;
   width: 100%;
 }
@@ -12,7 +16,7 @@
 @media (min-width: 720px) {
   /* Prose column only as wide as the copy (up to 62ch); media fills the rest so the
      placeholder sits beside the text with no huge empty band. */
-  .our-story__layout {
+  .our-story-layout {
     grid-template-columns: minmax(0, min(100%, 62ch)) minmax(11rem, 1fr);
     gap: 2rem;
     align-items: center;

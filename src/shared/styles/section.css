@@ -1,3 +1,7 @@
+/* ==========================================================================
+   section.css — Shared section typography/layout primitives
+   ========================================================================== */
+
 /* Shared layout for impact report sections */
 .report-section {
   width: 100%;
@@ -11,7 +15,7 @@
   border-bottom: none;
 }
 
-.report-section__eyebrow {
+.report-section-eyebrow {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -20,28 +24,28 @@
   margin-bottom: 0.5rem;
 }
 
-.report-section__title {
+.report-section-title {
   font-size: clamp(1.65rem, 4vw, 2.15rem);
   font-weight: 800;
   color: var(--teal-dark);
   line-height: 1.2;
 }
 
-.report-section__prose {
+.report-section-prose {
   font-family: 'Nunito', var(--font-main);
   font-size: 1.02rem;
   line-height: 1.65;
   color: var(--text-dark);
 }
 
-.report-section__prose p + p {
+.report-section-prose p + p {
   margin-top: 1rem;
 }
 
-.report-section__media {
+.report-section-media {
   margin-top: 1.75rem;
 }
 
-.report-section__media--flush-top {
+.report-section-media-flush-top {
   margin-top: 1rem;
 }

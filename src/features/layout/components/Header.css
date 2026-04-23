@@ -72,49 +72,7 @@
 
 
 /* ==========================================================================
-   3. DESKTOP DROPDOWN MENU
-   ========================================================================== */
-
-.nav-item.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(10, 78, 78, 0.98);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-direction: column;
-  padding: 8px 0;
-  z-index: 100;
-}
-
-.nav-item.dropdown.open .dropdown-menu {
-  display: flex;
-}
-
-.dropdown-item {
-  padding: 10px 20px;
-  color: var(--parchment);
-  background: transparent;
-  border: none;
-  text-align: left;
-  font-family: inherit;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.dropdown-item:hover {
-  background: rgba(249, 233, 192, 0.1);
-}
-
-
-/* ==========================================================================
-   4. MOBILE HAMBURGER TOGGLE
+   3. MOBILE HAMBURGER TOGGLE
    ========================================================================== */
 
 .mobile-menu-toggle {
@@ -152,7 +110,7 @@
 
 
 /* ==========================================================================
-   5. MOBILE NAV PANEL
+   4. MOBILE NAV PANEL
    ========================================================================== */
 
 .mobile-nav {
@@ -198,42 +156,7 @@
 
 
 /* ==========================================================================
-   6. MOBILE DROPDOWN MENU
-   ========================================================================== */
-
-.mobile-dropdown {
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-dropdown-menu {
-  display: flex;
-  flex-direction: column;
-  padding: 8px 0;
-  background: rgba(10, 78, 78, 0.98);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-dropdown-item {
-  padding: 10px 20px;
-  color: var(--parchment);
-  background: transparent;
-  border: none;
-  text-align: left;
-  font-family: inherit;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.mobile-dropdown-item:hover {
-  background: rgba(249, 233, 192, 0.1);
-}
-
-
-/* ==========================================================================
-   7. RESPONSIVE — SHOW/HIDE DESKTOP VS MOBILE
+   5. RESPONSIVE — SHOW/HIDE DESKTOP VS MOBILE
    ========================================================================== */
 
 @media (max-width: 768px) {

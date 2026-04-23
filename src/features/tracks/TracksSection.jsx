@@ -1,3 +1,6 @@
+// src/features/tracks/TracksSection.jsx
+// Track cards shown in sponsorship report context.
+
 import './TracksSection.css'
 
 const TRACKS = [
@@ -39,21 +42,21 @@ const TRACKS = [
   },
 ]
 
-const TracksSection = () => (
+const Tracks = () => (
   <section className="report-section tracks-section" id="tracks" aria-labelledby="tracks-title">
-    <h2 id="tracks-title" className="report-section__title">
+    <h2 id="tracks-title" className="report-section-title">
       Hack@URI 2026 Tracks
     </h2>
-    <ul className="tracks-section__grid">
+    <ul className="tracks-section-grid">
       {TRACKS.map((track) => (
-        <li key={track.name} className="tracks-section__card">
-          <h3 className="tracks-section__name">{track.name}</h3>
-          <p className="tracks-section__tagline">{track.tagline}</p>
-          <p className="tracks-section__description">{track.description}</p>
+        <li key={track.name} className="tracks-section-card">
+          <h3 className="tracks-section-name">{track.name}</h3>
+          <p className="tracks-section-tagline">{track.tagline}</p>
+          <p className="tracks-section-description">{track.description}</p>
         </li>
       ))}
     </ul>
   </section>
 )
 
-export default TracksSection
+export default Tracks

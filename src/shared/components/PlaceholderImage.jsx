@@ -10,9 +10,9 @@ const PlaceholderImage = ({ label = 'Image placeholder', shape = 'standard', cla
     role="img"
     aria-label={label}
   >
-    <span className="placeholder-image__inner" aria-hidden>
-      <span className="placeholder-image__icon" />
-      <span className="placeholder-image__label">{label}</span>
+    <span className="placeholder-image-inner" aria-hidden>
+      <span className="placeholder-image-icon" />
+      <span className="placeholder-image-label">{label}</span>
     </span>
   </div>
 )

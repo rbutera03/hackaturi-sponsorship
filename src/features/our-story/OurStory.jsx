@@ -1,13 +1,16 @@
+// src/features/our-story/OurStory.jsx
+// Story section describing Hack@URI mission and event context.
+
 import PlaceholderImage from '../../shared/components/PlaceholderImage.jsx'
 import './OurStory.css'
 
 const OurStory = () => (
   <section className="report-section our-story" id="our-story" aria-labelledby="our-story-title">
-    <h2 id="our-story-title" className="report-section__title">
+    <h2 id="our-story-title" className="report-section-title">
       Our story
     </h2>
-    <div className="our-story__layout">
-      <div className="report-section__prose our-story__prose">
+    <div className="our-story-layout">
+      <div className="report-section-prose our-story-prose">
         <p>
           Hack@URI 2026 was the University of Rhode Island&apos;s first-ever large-scale
           hackathon, launched in partnership with Major League Hacking. Held on February 21–22,
@@ -24,7 +27,7 @@ const OurStory = () => (
           Hack@URI is your platform.
         </p>
       </div>
-      <div className="our-story__media">
+      <div className="our-story-media">
         <PlaceholderImage label="Venue, crowd, or team photo" shape="standard" />
       </div>
     </div>

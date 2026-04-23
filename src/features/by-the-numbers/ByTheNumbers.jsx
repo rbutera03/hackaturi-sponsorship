@@ -1,3 +1,6 @@
+// src/features/by-the-numbers/ByTheNumbers.jsx
+// Metric bar summarizing impact numbers from Hack@URI 2026.
+
 import './ByTheNumbers.css'
 
 const STATS = [
@@ -30,12 +33,12 @@ const STATS = [
 
 const ByTheNumbers = () => (
   <section className="by-the-numbers-impact" id="by-the-numbers">
-    <ul className="by-the-numbers__stats-list">
+    <ul className="by-the-numbers-stats-list">
       {STATS.map(({ value, label, icon }) => (
-        <li key={label} className="by-the-numbers__stat-item">
-          <div className="by-the-numbers__icon">{icon}</div>
-          <span className="by-the-numbers__stat-value">{value}</span>
-          <span className="by-the-numbers__stat-label">{label}</span>
+        <li key={label} className="by-the-numbers-stat-item">
+          <div className="by-the-numbers-icon">{icon}</div>
+          <span className="by-the-numbers-stat-value">{value}</span>
+          <span className="by-the-numbers-stat-label">{label}</span>
         </li>
       ))}
     </ul>

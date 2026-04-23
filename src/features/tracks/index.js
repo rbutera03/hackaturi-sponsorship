@@ -1,1 +1,1 @@
-export { default as TracksSection } from './TracksSection.jsx'
+export { default as Tracks } from './TracksSection.jsx'

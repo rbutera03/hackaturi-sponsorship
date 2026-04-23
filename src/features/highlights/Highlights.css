@@ -1,15 +1,19 @@
-.highlights__intro {
+/* ==========================================================================
+   Highlights.css — Highlights intro and gallery layout
+   ========================================================================== */
+
+.highlights-intro {
   margin-bottom: 1.5rem;
 }
 
-.highlights__gallery {
+.highlights-gallery {
   display: grid;
   gap: 1rem;
   margin-bottom: 1.25rem;
 }
 
 @media (min-width: 700px) {
-  .highlights__gallery {
+  .highlights-gallery {
     grid-template-columns: repeat(3, 1fr);
   }
 }

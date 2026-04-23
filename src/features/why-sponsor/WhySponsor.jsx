@@ -1,3 +1,6 @@
+// src/features/why-sponsor/WhySponsor.jsx
+// Reasons grid explaining sponsorship value and outcomes.
+
 import './WhySponsor.css'
 
 const REASONS = [
@@ -29,19 +32,19 @@ const REASONS = [
 
 const WhySponsor = () => (
   <section className="report-section why-sponsor" id="why-sponsor" aria-labelledby="why-sponsor-title">
-    <h2 id="why-sponsor-title" className="report-section__title">
+    <h2 id="why-sponsor-title" className="report-section-title">
       Why sponsor Hack@URI?
     </h2>
-    <ol className="why-sponsor__grid">
+    <ol className="why-sponsor-grid">
       {REASONS.map((reason) => (
-        <li key={reason.n} className="why-sponsor__card">
-          <div className="why-sponsor__card-header">
-            <span className="why-sponsor__num" aria-hidden>
+        <li key={reason.n} className="why-sponsor-card">
+          <div className="why-sponsor-card-header">
+            <span className="why-sponsor-num" aria-hidden>
               {reason.n}
             </span>
-            <h3 className="why-sponsor__card-title">{reason.title}</h3>
+            <h3 className="why-sponsor-card-title">{reason.title}</h3>
           </div>
-          <p className="report-section__prose why-sponsor__card-body">{reason.body}</p>
+          <p className="report-section-prose why-sponsor-card-body">{reason.body}</p>
         </li>
       ))}
     </ol>

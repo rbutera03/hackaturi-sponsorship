@@ -1,4 +1,8 @@
-.tracks-section__grid {
+/* ==========================================================================
+   TracksSection.css — Track card grid styles
+   ========================================================================== */
+
+.tracks-section-grid {
   list-style: none;
   margin: 1.75rem 0 0;
   padding: 0;
@@ -7,7 +11,7 @@
   gap: 1.25rem;
 }
 
-.tracks-section__card {
+.tracks-section-card {
   background: #fff;
   border-radius: var(--radius-md);
   border: 1px solid rgba(12, 58, 64, 0.1);
@@ -18,14 +22,14 @@
   gap: 0.7rem;
 }
 
-.tracks-section__name {
+.tracks-section-name {
   font-size: 1.15rem;
   font-weight: 800;
   color: var(--teal-dark);
   margin: 0;
 }
 
-.tracks-section__tagline {
+.tracks-section-tagline {
   font-family: 'Nunito', var(--font-main);
   font-size: 0.88rem;
   font-weight: 700;
@@ -34,7 +38,7 @@
   line-height: 1.35;
 }
 
-.tracks-section__description {
+.tracks-section-description {
   font-family: 'Nunito', var(--font-main);
   font-size: 0.92rem;
   line-height: 1.55;
@@ -43,13 +47,13 @@
 }
 
 @media (min-width: 760px) {
-  .tracks-section__grid {
+  .tracks-section-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1200px) {
-  .tracks-section__grid {
+  .tracks-section-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

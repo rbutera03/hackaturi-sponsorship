@@ -1,3 +1,7 @@
+/* ==========================================================================
+   ImpactHero.css — Sponsorship report hero section
+   ========================================================================== */
+
 .impact-hero {
   width: 100%;
   max-width: none;
@@ -6,20 +10,20 @@
   border-bottom: 1px solid rgba(12, 58, 64, 0.1);
 }
 
-.impact-hero__grid {
+.impact-hero-grid {
   display: grid;
   gap: 1rem;
   align-items: center;
 }
 
 @media (min-width: 768px) {
-  .impact-hero__grid {
+  .impact-hero-grid {
     grid-template-columns: 1fr 1.15fr;
     gap: 1.25rem;
   }
 }
 
-.impact-hero__brand {
+.impact-hero-brand {
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -28,7 +32,7 @@
   margin-bottom: 0.35rem;
 }
 
-.impact-hero__title-row {
+.impact-hero-title-row {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -38,7 +42,7 @@
   line-height: 1.1;
 }
 
-.impact-hero__logo {
+.impact-hero-logo {
   flex-shrink: 0;
   height: 3em;
   width: 3em;
@@ -46,7 +50,7 @@
   display: block;
 }
 
-.impact-hero__title {
+.impact-hero-title {
   margin: 0 0 0 -0.4em;
   font-size: inherit;
   font-weight: 800;
@@ -55,7 +59,7 @@
   white-space: nowrap;
 }
 
-.impact-hero__subtitle {
+.impact-hero-subtitle {
   font-family: 'Nunito', var(--font-main);
   font-size: 1.05rem;
   line-height: 1.55;
@@ -63,6 +67,6 @@
   max-width: 36ch;
 }
 
-.impact-hero__visual {
+.impact-hero-visual {
   min-width: 0;
 }

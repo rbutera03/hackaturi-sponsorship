@@ -1,10 +1,18 @@
-// Sponsorship impact report — same header chrome as hackaturi2025, in-page scroll only
-// (no links to the main site, archive, or external routes).
+// src/features/layout/components/Header.jsx
+// Sponsorship report header with in-page section navigation and auto-hide on scroll.
 
 import { useState, useEffect } from 'react'
 import './Header.css'
 
-const NAV_ITEMS = [{}]
+const NAV_ITEMS = [
+  { id: 'hero', label: 'Overview' },
+  { id: 'our-story', label: 'Our Story' },
+  { id: 'by-the-numbers', label: 'By The Numbers' },
+  { id: 'why-sponsor', label: 'Why Sponsor' },
+  { id: 'tracks', label: 'Tracks' },
+  { id: 'highlights', label: 'Highlights' },
+  { id: 'contact', label: 'Contact' },
+]
 
 const Header = ({ scrollToSection }) => {
   const [activeSection, setActiveSection] = useState('hero')
