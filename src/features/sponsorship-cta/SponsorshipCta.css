@@ -6,7 +6,7 @@
 
 @media (min-width: 768px) {
   .sponsorship-cta__layout {
-    grid-template-columns: 1fr minmax(200px, 280px);
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 }
@@ -77,4 +77,8 @@
 
 .sponsorship-cta__visual {
   min-width: 0;
+}
+
+.sponsorship-cta__visual .placeholder-image {
+  width: 100%;
 }

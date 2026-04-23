@@ -3,9 +3,8 @@ import './Highlights.css'
 
 const Highlights = () => (
   <section className="report-section highlights" id="highlights" aria-labelledby="highlights-title">
-    <p className="report-section__eyebrow">2026 highlights</p>
     <h2 id="highlights-title" className="report-section__title">
-      Resilience and energy
+      Hack@URI 2026 Highlights
     </h2>
     <div className="highlights__intro report-section__prose">
       <p>
@@ -20,9 +19,6 @@ const Highlights = () => (
       <PlaceholderImage label="Opening ceremony or keynote" shape="standard" />
       <PlaceholderImage label="Hacking floor or teams at work" shape="standard" />
       <PlaceholderImage label="Demos, expo, or winners" shape="standard" />
-    </div>
-    <div className="report-section__media">
-      <PlaceholderImage label="Mentors, judges, or workshop moment" shape="wide" />
     </div>
   </section>
 )

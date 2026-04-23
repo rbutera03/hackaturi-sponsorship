@@ -48,9 +48,6 @@ const SponsorshipCta = () => (
         <PlaceholderImage label="Team photo or thank-you to partners" shape="tall" />
       </div>
     </div>
-    <div className="report-section__media">
-      <PlaceholderImage label="Sponsor logo wall or partnership graphic" shape="wide" />
-    </div>
   </section>
 )
 
