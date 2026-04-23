@@ -1,13 +1,17 @@
 /* Aligns with hackaturi2025 design tokens */
 :root {
   --cream: #F6E9C8;
+  --parchment: #F9E9C0;
   --teal-nav: #0a4e4e;
   --teal-dark: #073d3c;
   --text-dark: #0C3A40;
   --gold: #C3A873;
+  --gold-light: #CBB979;
   --font-main: "Poppins", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --radius-md: 20px;
   --shadow-card: 0 8px 25px rgba(47, 37, 32, 0.1);
+  /* Horizontal inset from the viewport edge; scales on small/large screens */
+  --page-gutter: clamp(1rem, 4vw, 2.5rem);
 }
 
 .app {
@@ -19,4 +23,49 @@
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Wave + top offset only when the fixed header is shown (.app--with-header on the shell) */
+.app--with-header::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background:
+    linear-gradient(
+      to bottom,
+      #0a4e4e 0%,
+      #0a4e4e 50px,
+      transparent 50px
+    ),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 300' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,64 C120,40 200,80 360,72 C520,64 620,16 780,32 C940,48 1060,96 1220,88 C1380,80 1440,56 1440,56 L1440 0 0 0z' fill='%23083337'/%3E%3Cpath d='M0,88 C140,72 220,110 380,90 C540,70 640,40 800,60 C960,80 1080,120 1240,100 C1400,80 1440,72 1440,72 L1440 0 0 0z' fill='%230B4F4F' opacity='0.95'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: 0 50px;
+  pointer-events: none;
+  z-index: 50;
+  transform: scaleX(1.1);
+  transform-origin: top center;
+  transition: transform 200ms ease, opacity 200ms ease, visibility 200ms ease;
+}
+
+.app--with-header.scrolled::before {
+  transform: scaleX(1.1) translateY(-100%) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.sponsorship-main {
+  padding-top: 0;
+}
+
+.app--with-header .sponsorship-main {
+  padding-top: clamp(128px, 15vh, 188px);
+}
+
+html:has(.app--with-header) {
+  scroll-padding-top: clamp(128px, 15vh, 188px);
 }

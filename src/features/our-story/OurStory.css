@@ -1,16 +1,20 @@
 .our-story__layout {
   display: grid;
-  gap: 1.75rem;
+  gap: 1rem;
   align-items: start;
-}
-
-@media (min-width: 720px) {
-  .our-story__layout {
-    grid-template-columns: 1fr minmax(200px, 280px);
-    gap: 2rem;
-  }
 }
 
 .our-story__media {
   min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  /* Prose column only as wide as the copy (up to 62ch); media fills the rest so the
+     placeholder sits beside the text with no huge empty band. */
+  .our-story__layout {
+    grid-template-columns: minmax(0, min(100%, 62ch)) minmax(11rem, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
 }
