@@ -1,20 +1,23 @@
-import PlaceholderImage from '../../shared/components/PlaceholderImage.jsx'
 import './ImpactHero.css'
+import pirateLogo from '../../../assets/pirate_ram.svg'
 
 const ImpactHero = () => (
-  <section className="impact-hero" aria-labelledby="impact-hero-title">
+  <section className="impact-hero" id="hero" aria-labelledby="impact-hero-title">
     <div className="impact-hero__grid">
       <div className="impact-hero__copy">
-        <h1 id="impact-hero-title" className="impact-hero__title">
-          Sponsoring Hack@URI
-        </h1>
-        <p className="impact-hero__subtitle">
-          A look back at URI&apos;s first large-scale MLH-affiliated hackathon—and why partners
-          matter for what comes next.
-        </p>
-      </div>
-      <div className="impact-hero__visual">
-        <PlaceholderImage label="Hero photo or impact graphic" shape="wide" />
+        <div className="impact-hero__title-row">
+          <img
+            src={pirateLogo}
+            alt=""
+            className="impact-hero__logo"
+            width="48"
+            height="48"
+            aria-hidden="true"
+          />
+          <h1 id="impact-hero-title" className="impact-hero__title">
+            Sponsoring Hack@URI
+          </h1>
+        </div>
       </div>
     </div>
   </section>

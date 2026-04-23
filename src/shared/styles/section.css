@@ -1,8 +1,9 @@
 /* Shared layout for impact report sections */
 .report-section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 3rem var(--page-gutter);
   border-bottom: 1px solid rgba(12, 58, 64, 0.1);
 }
 
@@ -24,7 +25,6 @@
   font-weight: 800;
   color: var(--teal-dark);
   line-height: 1.2;
-  margin-bottom: 1.25rem;
 }
 
 .report-section__prose {

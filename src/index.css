@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+html {
+  /* Slightly larger type across the report (~6% vs typical 16px default) */
+  font-size: 106.25%;
+  scroll-padding-top: 0;
+}
+
 html, body, #root {
   width: 100%;
   min-height: 100%;

@@ -25,11 +25,8 @@ const OurStory = () => (
         </p>
       </div>
       <div className="our-story__media">
-        <PlaceholderImage label="Venue, crowd, or team photo" shape="tall" />
+        <PlaceholderImage label="Venue, crowd, or team photo" shape="standard" />
       </div>
-    </div>
-    <div className="report-section__media">
-      <PlaceholderImage label="Weekend atmosphere or wide event shot" shape="standard" />
     </div>
   </section>
 )
