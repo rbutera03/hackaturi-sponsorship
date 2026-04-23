@@ -1,4 +1,3 @@
-import PlaceholderImage from '../../shared/components/PlaceholderImage.jsx'
 import './TracksSection.css'
 
 const TRACKS = [
@@ -42,24 +41,15 @@ const TRACKS = [
 
 const TracksSection = () => (
   <section className="report-section tracks-section" id="tracks" aria-labelledby="tracks-title">
-    <p className="report-section__eyebrow">2026 tracks</p>
     <h2 id="tracks-title" className="report-section__title">
-      Where participants built
+      Hack@URI 2026 Tracks
     </h2>
-    <div className="report-section__media report-section__media--flush-top">
-      <PlaceholderImage label="Tracks overview or judging floor" shape="wide" />
-    </div>
     <ul className="tracks-section__grid">
       {TRACKS.map((track) => (
         <li key={track.name} className="tracks-section__card">
-          <div className="tracks-section__card-media">
-            <PlaceholderImage label={`${track.name} — project photo`} shape="square" />
-          </div>
-          <div className="tracks-section__card-copy">
-            <h3 className="tracks-section__name">{track.name}</h3>
-            <p className="tracks-section__tagline">{track.tagline}</p>
-            <p className="tracks-section__description">{track.description}</p>
-          </div>
+          <h3 className="tracks-section__name">{track.name}</h3>
+          <p className="tracks-section__tagline">{track.tagline}</p>
+          <p className="tracks-section__description">{track.description}</p>
         </li>
       ))}
     </ul>
