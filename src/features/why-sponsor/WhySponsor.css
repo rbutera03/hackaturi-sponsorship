@@ -1,57 +1,68 @@
-.why-sponsor__list {
+.why-sponsor__grid {
   list-style: none;
   margin: 2rem 0 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.why-sponsor__item {
-  margin: 0;
-}
-
-.why-sponsor__item-header {
-  display: flex;
-  align-items: baseline;
-  gap: 0.85rem;
-  margin-bottom: 0.75rem;
-  flex-wrap: wrap;
-}
-
-.why-sponsor__num {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--gold);
-  letter-spacing: 0.04em;
-}
-
-.why-sponsor__item-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--teal-dark);
-  line-height: 1.25;
-}
-
-.why-sponsor__item-body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.25rem;
 }
 
-.why-sponsor__item-body .report-section__prose {
+.why-sponsor__card {
+  margin: 0;
+  background: var(--cream);
+  border: 2px solid rgba(12, 58, 64, 0.1);
+  border-radius: var(--radius-md);
+  border-color: var(--teal-dark);
+  box-shadow: var(--shadow-card);
+  padding: 1.1rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.why-sponsor__card-header {
+  display: flex;
+  align-items: start;
+  gap: 0.65rem;
+}
+
+.why-sponsor__card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--teal-dark);
+  line-height: 1.3;
   margin: 0;
 }
 
-.why-sponsor__item-placeholder {
-  max-width: 100%;
+.why-sponsor__card-body {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-@media (min-width: 640px) {
-  .why-sponsor__item-body {
-    display: grid;
-    grid-template-columns: 1fr minmax(220px, 38%);
-    gap: 1.25rem;
-    align-items: start;
+.why-sponsor__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: rgba(12, 58, 64, 0.08);
+  border: 1px solid rgba(12, 58, 64, 0.2);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+@media (min-width: 760px) {
+  .why-sponsor__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .why-sponsor__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

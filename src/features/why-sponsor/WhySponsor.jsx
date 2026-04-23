@@ -1,4 +1,3 @@
-import PlaceholderImage from '../../shared/components/PlaceholderImage.jsx'
 import './WhySponsor.css'
 
 const REASONS = [
@@ -30,30 +29,19 @@ const REASONS = [
 
 const WhySponsor = () => (
   <section className="report-section why-sponsor" id="why-sponsor" aria-labelledby="why-sponsor-title">
-    <p className="report-section__eyebrow">Why sponsor us</p>
     <h2 id="why-sponsor-title" className="report-section__title">
-      Partner with a growing tradition
+      Why sponsor Hack@URI?
     </h2>
-    <div className="report-section__media report-section__media--flush-top">
-      <PlaceholderImage label="Sponsors fair, booth, or partner logos collage" shape="wide" />
-    </div>
-    <ol className="why-sponsor__list">
+    <ol className="why-sponsor__grid">
       {REASONS.map((reason) => (
-        <li key={reason.n} className="why-sponsor__item">
-          <div className="why-sponsor__item-header">
+        <li key={reason.n} className="why-sponsor__card">
+          <div className="why-sponsor__card-header">
             <span className="why-sponsor__num" aria-hidden>
               {reason.n}
             </span>
-            <h3 className="why-sponsor__item-title">{reason.title}</h3>
+            <h3 className="why-sponsor__card-title">{reason.title}</h3>
           </div>
-          <div className="why-sponsor__item-body">
-            <p className="report-section__prose">{reason.body}</p>
-            <PlaceholderImage
-              label={`Photo or graphic — reason ${reason.n}`}
-              shape="standard"
-              className="why-sponsor__item-placeholder"
-            />
-          </div>
+          <p className="report-section__prose why-sponsor__card-body">{reason.body}</p>
         </li>
       ))}
     </ol>
