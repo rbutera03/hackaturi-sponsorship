@@ -28,7 +28,11 @@ const OurStory = () => (
         </p>
       </div>
       <div className="our-story-media">
-        <PlaceholderImage label="Venue, crowd, or team photo" shape="standard" />
+        <PlaceholderImage
+          src="/images/2026/opening_ceremony.jpg"
+          alt="Hack@URI crowd at the Fascitelli Center"
+          shape="standard"
+        />
       </div>
     </div>
   </section>

@@ -14,6 +14,18 @@
   overflow: hidden;
 }
 
+.placeholder-image--photo {
+  border: none;
+  background: none;
+}
+
+.placeholder-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .placeholder-image--wide {
   aspect-ratio: 21 / 9;
 }

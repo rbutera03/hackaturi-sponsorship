@@ -1,5 +1,5 @@
 // src/features/highlights/Highlights.jsx
-// Highlights narrative with gallery placeholders.
+// Highlights narrative with event photo gallery.
 
 import PlaceholderImage from '../../shared/components/PlaceholderImage.jsx'
 import './Highlights.css'
@@ -19,9 +19,21 @@ const Highlights = () => (
       </p>
     </div>
     <div className="highlights-gallery">
-      <PlaceholderImage label="Opening ceremony or keynote" shape="standard" />
-      <PlaceholderImage label="Hacking floor or teams at work" shape="standard" />
-      <PlaceholderImage label="Demos, expo, or winners" shape="standard" />
+      <PlaceholderImage
+        src="/images/2026/judging.jpg"
+        alt="Judging at Hack@URI 2026"
+        shape="standard"
+      />
+      <PlaceholderImage
+        src="/images/2026/workshop.jpg"
+        alt="Participants at a workshop during Hack@URI"
+        shape="standard"
+      />
+      <PlaceholderImage
+        src="/images/2026/winners1.jpg"
+        alt="Hack@URI 2026 winners on stage"
+        shape="standard"
+      />
     </div>
   </section>
 )

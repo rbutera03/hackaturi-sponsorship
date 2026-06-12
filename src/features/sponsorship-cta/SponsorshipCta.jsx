@@ -48,7 +48,11 @@ const SponsorshipCta = () => (
         </div>
       </div>
       <div className="sponsorship-cta-visual">
-        <PlaceholderImage label="Team photo or thank-you to partners" shape="tall" />
+        <PlaceholderImage
+          src="/images/2026/team_outside.jpg"
+          alt="Hack@URI mentors and sponsors"
+          shape="tall"
+        />
       </div>
     </div>
   </section>
