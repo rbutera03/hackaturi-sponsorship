@@ -24,7 +24,7 @@ const SponsorshipCta = () => (
           <p>
             We&apos;d love to hear from you! Whether you&apos;re looking to sponsor Hack@URI,
             partner on workshops, provide mentorship, or get your brand in front of 200+ talented
-            students from 40+ universities, let&apos;s talk. Reach out to us at{' '}
+            students from 60+ universities, let&apos;s talk. Reach out to us at{' '}
             <a className="sponsorship-cta-inline-link" href={`mailto:${CONTACT_EMAIL}`}>
               {CONTACT_EMAIL}
             </a>{' '}

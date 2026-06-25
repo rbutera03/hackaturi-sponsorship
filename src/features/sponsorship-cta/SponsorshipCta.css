@@ -2,87 +2,88 @@
    SponsorshipCta.css — Contact CTA layout and action buttons
    ========================================================================== */
 
-.sponsorship-cta-layout {
-  display: grid;
-  gap: 1.75rem;
-  align-items: start;
-}
-
-@media (min-width: 768px) {
-  .sponsorship-cta-layout {
-    grid-template-columns: 1fr 1fr;
+   .sponsorship-cta-layout {
+    display: grid;
     gap: 2rem;
+    align-items: start;
   }
-}
-
-.sponsorship-cta-prose {
-  margin-bottom: 1.5rem;
-}
-
-.sponsorship-cta-inline-link {
-  color: var(--teal-nav);
-  font-weight: 700;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
-}
-
-.sponsorship-cta-inline-link:hover {
-  text-decoration: none;
-}
-
-.sponsorship-cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.sponsorship-cta-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  border-radius: 999px;
-  padding: 0.65rem 1.25rem;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.sponsorship-cta-btn:hover {
-  transform: translateY(-1px);
-}
-
-.sponsorship-cta-btn-primary {
-  background: var(--teal-nav);
-  color: var(--cream);
-  box-shadow: 0 4px 14px rgba(10, 78, 78, 0.35);
-}
-
-.sponsorship-cta-btn-primary:hover {
-  box-shadow: 0 6px 18px rgba(10, 78, 78, 0.45);
-}
-
-.sponsorship-cta-btn-secondary {
-  background: transparent;
-  color: var(--teal-nav);
-  border: 2px solid var(--gold);
-  padding: 0.55rem 1.15rem;
-}
-
-.sponsorship-cta-btn-secondary:hover {
-  background: rgba(195, 168, 115, 0.15);
-}
-
-.sponsorship-cta-icon-external {
-  width: 0.85em;
-  height: 0.85em;
-  opacity: 0.85;
-}
-
-.sponsorship-cta-visual {
-  min-width: 0;
-}
-
-.sponsorship-cta-visual .placeholder-image {
-  width: 100%;
-}
+  
+  @media (min-width: 768px) {
+    .sponsorship-cta-layout {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+  }
+  
+  .sponsorship-cta-prose {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sponsorship-cta-inline-link {
+    color: var(--space-cyan);
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  
+  .sponsorship-cta-inline-link:hover {
+    text-decoration: none;
+  }
+  
+  .sponsorship-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .sponsorship-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 0.65rem 1.25rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .sponsorship-cta-btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .sponsorship-cta-btn-primary {
+    background: linear-gradient(120deg, var(--space-blue), var(--space-purple));
+    color: var(--space-white);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.35);
+  }
+  
+  .sponsorship-cta-btn-primary:hover {
+    box-shadow: 0 6px 26px rgba(0, 255, 255, 0.5);
+  }
+  
+  .sponsorship-cta-btn-secondary {
+    background: transparent;
+    color: var(--space-yellow);
+    border: 2px solid var(--space-yellow);
+    padding: 0.55rem 1.15rem;
+  }
+  
+  .sponsorship-cta-btn-secondary:hover {
+    background: rgba(255, 229, 102, 0.12);
+  }
+  
+  .sponsorship-cta-icon-external {
+    width: 0.85em;
+    height: 0.85em;
+    opacity: 0.85;
+  }
+  
+  .sponsorship-cta-visual {
+    min-width: 0;
+  }
+  
+  .sponsorship-cta-visual .placeholder-image {
+    width: 100%;
+  }

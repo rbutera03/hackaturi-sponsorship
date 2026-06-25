@@ -2,74 +2,137 @@
    shared.css — App shell and shared design tokens
    ========================================================================== */
 
-/* Aligns with hackaturi2025 design tokens */
-:root {
-  --cream: #F6E9C8;
-  --parchment: #F9E9C0;
-  --teal-nav: #0a4e4e;
-  --teal-dark: #073d3c;
-  --text-dark: #0C3A40;
-  --gold: #C3A873;
-  --gold-light: #CBB979;
-  --font-main: "Poppins", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --radius-md: 20px;
-  --shadow-card: 0 8px 25px rgba(47, 37, 32, 0.1);
-  /* Horizontal inset from the viewport edge; scales on small/large screens */
-  --page-gutter: clamp(1rem, 4vw, 2.5rem);
-}
+/* Space theme design tokens — deep cosmic gradient + cyan/pink/purple/gold accents.
+   Variable NAMES are kept the same as the previous teal/cream theme so every
+   feature file that references --teal-nav, --cream, --gold, etc. automatically
+   repaints into the new space palette without needing per-file edits. */
+   :root {
+    /* Core surfaces */
+    --cream: #141a4d;              /* card/surface base (was parchment cream) */
+    --parchment: #1a2266;          /* secondary surface (was light parchment) */
+    --teal-nav: #3d85ff;           /* primary accent / nav surfaces (was teal) */
+    --teal-dark: #ffffff;          /* headings (was dark teal text) */
+    --text-dark: #d7defc;          /* body text on dark surfaces (was dark teal) */
+    --gold: #ffe566;               /* warm accent (was gold) */
+    --gold-light: #fff4a3;         /* soft warm accent (was light gold) */
+  
+    /* Space palette */
+    --space-deep-blue: #0e1e6b;
+    --space-violet: #2d0a5e;
+    --space-navy: #0b0d4a;
+    --space-white: #ffffff;
+    --space-cyan: #00ffff;
+    --space-blue: #3d85ff;
+    --space-yellow: #ffe566;
+    --space-pink: #ff4ecd;
+    --space-purple: #a855f7;
+    --space-soft-yellow: #fff4a3;
+  
+    --font-main: "Poppins", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --radius-md: 20px;
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.45);
+    /* Horizontal inset from the viewport edge; scales on small/large screens.
+       Increased across the board for more breathing room on every edge. */
+    --page-gutter: clamp(2.25rem, 8vw, 6rem);
+  }
+  
+  .app {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 0%, rgba(168, 85, 247, 0.25), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 20%, rgba(0, 255, 255, 0.12), transparent 60%),
+      linear-gradient(160deg, var(--space-deep-blue) 0%, var(--space-violet) 55%, var(--space-navy) 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Decorative stars — same SVG + twinkle pattern as hackaturi2025 */
+  .app-star {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.6;
+    animation: twinkle 3s ease-in-out infinite;
+    z-index: 0;
+  }
 
-.app {
-  font-family: var(--font-main);
-  margin: 0;
-  padding: 0;
-  background: var(--cream);
-  min-height: 100vh;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  position: relative;
-}
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1) rotate(0deg);
+    }
 
-/* Wave + top offset only when the fixed header is shown (.app--with-header on the shell) */
-.app--with-header::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 300px;
-  background:
-    linear-gradient(
-      to bottom,
-      #0a4e4e 0%,
-      #0a4e4e 50px,
-      transparent 50px
-    ),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 300' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,64 C120,40 200,80 360,72 C520,64 620,16 780,32 C940,48 1060,96 1220,88 C1380,80 1440,56 1440,56 L1440 0 0 0z' fill='%23083337'/%3E%3Cpath d='M0,88 C140,72 220,110 380,90 C540,70 640,40 800,60 C960,80 1080,120 1240,100 C1400,80 1440,72 1440,72 L1440 0 0 0z' fill='%230B4F4F' opacity='0.95'/%3E%3C/svg%3E");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: 0 50px;
-  pointer-events: none;
-  z-index: 50;
-  transform: scaleX(1.1);
-  transform-origin: top center;
-  transition: transform 200ms ease, opacity 200ms ease, visibility 200ms ease;
-}
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2) rotate(180deg);
+    }
+  }
 
-.app--with-header.scrolled::before {
-  transform: scaleX(1.1) translateY(-100%) !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-}
+  .app-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
 
-.sponsorship-main {
-  padding-top: 0;
-}
+  .app > *:not(.app-stars) {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Wave + top offset only when the fixed header is shown (.app--with-header on the shell) */
+  .app--with-header::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background:
+      linear-gradient(
+        to bottom,
+        #0b0d4a 0%,
+        #0b0d4a 50px,
+        transparent 50px
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 300' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,64 C120,40 200,80 360,72 C520,64 620,16 780,32 C940,48 1060,96 1220,88 C1380,80 1440,56 1440,56 L1440 0 0 0z' fill='%230e1e6b'/%3E%3Cpath d='M0,88 C140,72 220,110 380,90 C540,70 640,40 800,60 C960,80 1080,120 1240,100 C1400,80 1440,72 1440,72 L1440 0 0 0z' fill='%232d0a5e' opacity='0.95'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 50px;
+    pointer-events: none;
+    z-index: 50;
+    transform: scaleX(1.1);
+    transform-origin: top center;
+    transition: transform 200ms ease, opacity 200ms ease, visibility 200ms ease;
+  }
+  
+  .app--with-header.scrolled::before {
+    transform: scaleX(1.1) translateY(-100%) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+  
+  .sponsorship-main {
+    padding-top: 0;
+  }
+  
+  .app--with-header .sponsorship-main {
+    padding-top: clamp(128px, 15vh, 188px);
+  }
+  
+  html:has(.app--with-header) {
+    scroll-padding-top: clamp(128px, 15vh, 188px);
+  }
 
-.app--with-header .sponsorship-main {
-  padding-top: clamp(128px, 15vh, 188px);
-}
-
-html:has(.app--with-header) {
-  scroll-padding-top: clamp(128px, 15vh, 188px);
-}
+  @media (max-width: 768px) {
+    .app-star {
+      display: none;
+    }
+  }

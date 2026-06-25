@@ -1,16 +1,44 @@
 // src/features/our-story/OurStory.jsx
 // Story section describing Hack@URI mission and event context.
 
+import starsSvg from '../../../assets/stars-bg.svg'
+import { OUR_STORY_DECOR_STARS } from '../../app/decorStars.js'
 import PlaceholderImage from '../../shared/components/PlaceholderImage.jsx'
 import './OurStory.css'
 
 const OurStory = () => (
   <section className="report-section our-story" id="our-story" aria-labelledby="our-story-title">
-    <h2 id="our-story-title" className="report-section-title">
-      Our story
-    </h2>
+    <div className="our-story-stars" aria-hidden>
+      {OUR_STORY_DECOR_STARS.map((star, index) => (
+        <img
+          key={index}
+          src={starsSvg}
+          alt=""
+          className="our-story-star"
+          style={{
+            top: star.top,
+            left: star.left,
+            right: star.right,
+            width: `${star.size}px`,
+            height: `${star.size}px`,
+            animationDelay: `${star.delay}s`,
+          }}
+        />
+      ))}
+    </div>
     <div className="our-story-layout">
-      <div className="report-section-prose our-story-prose">
+      <div className="our-story-media">
+        <PlaceholderImage
+          src="/images/2026/opening_ceremony.jpg"
+          alt="Hack@URI crowd at the Fascitelli Center"
+          shape="standard"
+        />
+      </div>
+      <div className="our-story-copy">
+        <h2 id="our-story-title" className="report-section-title">
+          Hack@URI's Successful Debut
+        </h2>
+        <div className="report-section-prose">
         <p>
           Hack@URI 2026 was the University of Rhode Island&apos;s first-ever large-scale
           hackathon, launched in partnership with Major League Hacking. Held on February 21–22,
@@ -26,13 +54,7 @@ const OurStory = () => (
           creative community. Whether you&apos;re a first-time hacker or a seasoned builder,
           Hack@URI is your platform.
         </p>
-      </div>
-      <div className="our-story-media">
-        <PlaceholderImage
-          src="/images/2026/opening_ceremony.jpg"
-          alt="Hack@URI crowd at the Fascitelli Center"
-          shape="standard"
-        />
+        </div>
       </div>
     </div>
   </section>

@@ -9,168 +9,169 @@
    1. HEADER SHELL
    ========================================================================== */
 
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 60;
-  padding: 10px 22px;
-  background: rgba(10, 78, 78); /* var(--teal-nav) */
-  border-top: 10px solid var(--teal-nav);
-  transition: transform 280ms ease, opacity 180ms ease, visibility 280ms ease;
-}
-
-.site-header.hidden {
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(-100%);
-}
-
-.header-inner {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-}
-
-
-/* ==========================================================================
-   2. DESKTOP NAV BUTTONS
-   ========================================================================== */
-
-.main-nav {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.nav-btn {
-  background: transparent;
-  border: none;
-  color: var(--parchment);
-  padding: 12px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 1.4rem;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.nav-btn:hover {
-  transform: translateY(-3px);
-  background: rgba(249, 233, 192, 0.08);
-}
-
-.nav-btn.active {
-  background: var(--gold-light);
-  color: var(--teal-nav);
-  box-shadow: 0 6px 18px rgba(203, 185, 121, 0.18);
-}
-
-
-/* ==========================================================================
-   3. MOBILE HAMBURGER TOGGLE
-   ========================================================================== */
-
-.mobile-menu-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hamburger {
-  width: 25px;
-  height: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 3px;
-  background: var(--parchment);
-  border-radius: 2px;
-  transition: all 0.3s ease;
-  transform-origin: center;
-}
-
-/* Hamburger → ✕ animation */
-.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-
-
-/* ==========================================================================
-   4. MOBILE NAV PANEL
-   ========================================================================== */
-
-.mobile-nav {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(10, 78, 78, 0.98);
-  backdrop-filter: blur(10px);
-  border-top: 2px solid var(--teal-nav);
-  z-index: 50;
-  /* Hidden state */
-  transform: translateY(-100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.mobile-nav.open {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-.mobile-nav-btn {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(249, 233, 192, 0.1);
-  color: var(--parchment);
-  padding: 15px 20px;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-align: left;
-  transition: background 0.3s ease;
-}
-
-.mobile-nav-btn:hover  { background: rgba(249, 233, 192, 0.1); }
-.mobile-nav-btn.active { background: var(--gold-light); color: var(--teal-nav); }
-.mobile-nav-btn:last-child { border-bottom: none; }
-
-
-/* ==========================================================================
-   5. RESPONSIVE — SHOW/HIDE DESKTOP VS MOBILE
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .header-inner {
-    padding: 0 8px;
-    gap: 10px;
-    justify-content: space-between;
+   .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+    padding: 10px var(--page-gutter);
+    background: rgba(11, 13, 74, 0.92); /* var(--space-navy) */
+    border-top: 10px solid var(--space-navy);
+    backdrop-filter: blur(10px);
+    transition: transform 280ms ease, opacity 180ms ease, visibility 280ms ease;
   }
-
-  .main-nav           { display: none; }
-  .mobile-menu-toggle { display: flex; }
-}
-
-@media (min-width: 769px) {
-  .mobile-menu-toggle { display: none; }
-  .mobile-nav         { display: none; }
-}
+  
+  .site-header.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  
+  .header-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+  
+  
+  /* ==========================================================================
+     2. DESKTOP NAV BUTTONS
+     ========================================================================== */
+  
+  .main-nav {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--parchment);
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .nav-btn:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 255, 255, 0.1);
+  }
+  
+  .nav-btn.active {
+    background: var(--space-cyan);
+    color: var(--space-navy);
+    box-shadow: 0 6px 18px rgba(0, 255, 255, 0.35);
+  }
+  
+  
+  /* ==========================================================================
+     3. MOBILE HAMBURGER TOGGLE
+     ========================================================================== */
+  
+  .mobile-menu-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hamburger {
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    background: var(--parchment);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  
+  /* Hamburger → ✕ animation */
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+  
+  
+  /* ==========================================================================
+     4. MOBILE NAV PANEL
+     ========================================================================== */
+  
+  .mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(11, 13, 74, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid var(--space-navy);
+    z-index: 50;
+    /* Hidden state */
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .mobile-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .mobile-nav-btn {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--parchment);
+    padding: 15px var(--page-gutter);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: left;
+    transition: background 0.3s ease;
+  }
+  
+  .mobile-nav-btn:hover  { background: rgba(0, 255, 255, 0.08); }
+  .mobile-nav-btn.active { background: var(--space-cyan); color: var(--space-navy); }
+  .mobile-nav-btn:last-child { border-bottom: none; }
+  
+  
+  /* ==========================================================================
+     5. RESPONSIVE — SHOW/HIDE DESKTOP VS MOBILE
+     ========================================================================== */
+  
+  @media (max-width: 768px) {
+    .header-inner {
+      padding: 0;
+      gap: 10px;
+      justify-content: space-between;
+    }
+  
+    .main-nav           { display: none; }
+    .mobile-menu-toggle { display: flex; }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-menu-toggle { display: none; }
+    .mobile-nav         { display: none; }
+  }

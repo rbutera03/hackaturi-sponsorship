@@ -2,18 +2,23 @@
    Highlights.css — Highlights intro and gallery layout
    ========================================================================== */
 
-.highlights-intro {
-  margin-bottom: 1.5rem;
-}
-
-.highlights-gallery {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-@media (min-width: 700px) {
-  .highlights-gallery {
-    grid-template-columns: repeat(3, 1fr);
+   .highlights-intro {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
-}
+  
+  .highlights-gallery {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .highlights-gallery .placeholder-image {
+    box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.3), 0 12px 28px rgba(0, 0, 0, 0.4);
+  }
+  
+  @media (min-width: 700px) {
+    .highlights-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }

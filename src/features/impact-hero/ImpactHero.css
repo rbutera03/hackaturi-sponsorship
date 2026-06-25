@@ -2,71 +2,111 @@
    ImpactHero.css — Sponsorship report hero section
    ========================================================================== */
 
-.impact-hero {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: clamp(2.25rem, 4.5vh, 3.25rem) var(--page-gutter) 1.25rem;
-  border-bottom: 1px solid rgba(12, 58, 64, 0.1);
-}
-
-.impact-hero-grid {
-  display: grid;
-  gap: 1rem;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .impact-hero-grid {
-    grid-template-columns: 1fr 1.15fr;
-    gap: 1.25rem;
+   .impact-hero {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1rem, 2.5vh, 1.5rem) var(--page-gutter) clamp(1rem, 2vh, 1.5rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: clamp(9rem, 22vh, 13rem);
   }
-}
 
-.impact-hero-brand {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--teal-nav);
-  margin-bottom: 0.35rem;
-}
+  .impact-hero-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-.impact-hero-title-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 0;
-  margin-bottom: 0;
-  font-size: clamp(1.65rem, 4.2vw, 2.35rem);
-  line-height: 1.1;
-}
+  .impact-hero-star {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.6;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+  
+  .impact-hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .impact-hero-grid {
+      grid-template-columns: 1fr 1.15fr;
+      gap: 1.25rem;
+    }
+  }
+  
+  .impact-hero-brand {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--space-cyan);
+    margin-bottom: 0.35rem;
+  }
+  
+  .impact-hero-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0;
+    margin-bottom: 0;
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    line-height: 1.05;
+  }
+  
+  .impact-hero-logo {
+    flex-shrink: 0;
+    height: 3em;
+    width: 3em;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 14px rgba(0, 255, 255, 0.45));
+    transform: rotate(-14deg);
+    animation: impact-hero-logo-float 5s ease-in-out infinite;
+  }
 
-.impact-hero-logo {
-  flex-shrink: 0;
-  height: 3em;
-  width: 3em;
-  object-fit: contain;
-  display: block;
-}
+  @keyframes impact-hero-logo-float {
+    0%,
+    100% {
+      transform: rotate(-14deg) translateY(0);
+    }
 
-.impact-hero-title {
-  margin: 0 0 0 -0.4em;
-  font-size: inherit;
-  font-weight: 800;
-  color: var(--teal-dark);
-  line-height: inherit;
-  white-space: nowrap;
-}
+    50% {
+      transform: rotate(-10deg) translateY(-8px);
+    }
+  }
+  
+  .impact-hero-title {
+    margin: 0 0 0 -0.4em;
+    font-size: inherit;
+    font-weight: 800;
+    color: var(--space-white);
+    line-height: inherit;
+    white-space: nowrap;
+    text-shadow: 0 0 24px rgba(168, 85, 247, 0.55), 0 0 6px rgba(0, 255, 255, 0.3);
+  }
+  
+  .impact-hero-subtitle {
+    font-family: 'Nunito', var(--font-main);
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-dark);
+    max-width: 36ch;
+  }
+  
+  .impact-hero-visual {
+    min-width: 0;
+  }
 
-.impact-hero-subtitle {
-  font-family: 'Nunito', var(--font-main);
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: var(--text-dark);
-  max-width: 36ch;
-}
-
-.impact-hero-visual {
-  min-width: 0;
-}
+  @media (max-width: 768px) {
+    .impact-hero-star {
+      display: none;
+    }
+  }

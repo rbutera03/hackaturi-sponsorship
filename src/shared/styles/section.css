@@ -7,8 +7,8 @@
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 3rem var(--page-gutter);
-  border-bottom: 1px solid rgba(12, 58, 64, 0.1);
+  padding: 2.5rem var(--page-gutter) 3.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .report-section:last-of-type {
@@ -20,7 +20,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--teal-nav);
+  color: var(--space-cyan);
   margin-bottom: 0.5rem;
 }
 
@@ -29,6 +29,7 @@
   font-weight: 800;
   color: var(--teal-dark);
   line-height: 1.2;
+  text-shadow: 0 0 18px rgba(0, 255, 255, 0.25);
 }
 
 .report-section-prose {

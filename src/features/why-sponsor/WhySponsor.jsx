@@ -6,27 +6,55 @@ import './WhySponsor.css'
 const REASONS = [
   {
     n: '01',
-    title: "Support URI's historic first",
-    body:
-      "Hack@URI is the first student-run, multi-track, MLH-affiliated hackathon in URI's history. By sponsoring, you become a founding partner of a growing tradition that places URI within a nationally recognized innovation network alongside top engineering and CS programs. Your early support builds credibility and momentum for years to come.",
+    title: "Become a founding partner of a growing tradition",
+    body: (
+      <>
+        Hack@URI is the <strong>first student-run, multi-track, MLH-affiliated hackathon</strong> in
+        URI&apos;s history. By sponsoring, <strong>you become a founding partner</strong> of a growing
+        tradition that places URI within a <strong>nationally recognized innovation network</strong>{' '}
+        alongside top engineering and CS programs. Your early support builds credibility and momentum
+        for years to come.
+      </>
+    ),
   },
   {
     n: '02',
-    title: 'Meet talented students from 40+ schools',
-    body:
-      "By sponsoring Hack@URI, you'll connect with outstanding computer science, engineering, design, and business students from across the country. Participants came from 60+ universities including MIT, Brown, Georgia Tech, and Northeastern. Gain access to participant resumes and portfolios to support your recruiting pipeline.",
+    title: 'Meet talented students from 60+ schools',
+    body: (
+      <>
+        By sponsoring Hack@URI, you&apos;ll connect with <strong>outstanding computer science,
+        engineering, design, and business students</strong> from across the country. Participants came
+        from <strong>60+ universities</strong> including <strong>MIT, Brown, Georgia Tech, and
+        Northeastern</strong>. Gain access to participant resumes and portfolios to support your{' '}
+        <strong>recruiting pipeline</strong>.
+      </>
+    ),
   },
   {
     n: '03',
     title: 'Showcase your company and brand',
-    body:
-      "Boost your company's visibility through our sponsorship fair, company-led workshops, and mentorship opportunities. At Hack@URI 2026, participants had access to mentors and product managers from Google, Microsoft, IBM, Fidelity, Accenture, Meditech, MergeFund, and more. We'd love for you to lead a workshop or demo at our next event.",
+    body: (
+      <>
+        Boost your company&apos;s visibility through our <strong>sponsorship fair, company-led
+        workshops, and mentorship opportunities</strong>. At Hack@URI 2026, participants had access to
+        mentors and product managers from <strong>Google, Microsoft, IBM, Fidelity, Accenture, Meditech,
+        MergeFund, and more</strong>. We&apos;d love for you to lead a workshop or demo at our next
+        event.
+      </>
+    ),
   },
   {
     n: '04',
     title: 'Promote innovation across disciplines',
-    body:
-      "Hack@URI is designed as a university-wide innovation platform, bringing together stakeholders from the College of Engineering, College of Business, College of Arts & Sciences, the Department of Computer Science, Cybersecurity, the Innovation Lab, URI Makerspace, and the URI Research Foundation. Your sponsorship reaches students beyond just CS—designers, entrepreneurs, and creators of all kinds.",
+    body: (
+      <>
+        Hack@URI is designed as a <strong>university-wide innovation platform</strong>, bringing
+        together stakeholders from the College of Engineering, College of Business, College of Arts
+        &amp; Sciences, the Department of Computer Science, Cybersecurity, the Innovation Lab, URI
+        Makerspace, and the URI Research Foundation. Your sponsorship reaches students{' '}
+        <strong>beyond just CS</strong>—designers, entrepreneurs, and creators of all kinds.
+      </>
+    ),
   },
 ]
 
